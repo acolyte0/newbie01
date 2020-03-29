@@ -32,3 +32,8 @@ let pTitle = document.createElement('title');
 let tTxt = document.createTextNode('The newbie\'s page');
 pTitle.appendChild(tTxt);
 pHead.appendChild(pTitle);
+let pBody = document.getElementsByTagName('body')[0];
+let bTitleH1 = document.createElement('h1');
+let bTH1Txt = document.createTextNode('This is a heading 1');
+bTitleH1.appendChild(bTH1Txt);
+pBody.appendChild(bTitleH1);
