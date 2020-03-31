@@ -30,7 +30,13 @@ f1(
     (whatever)=>{
         f2(whatever,
             (whatever1)=>{
-                console.log(whatever1)
+                f3(
+                    whatever1,
+                    (anything1)=>{
+                        console.log(anything1);
+                    },
+                    (err)=>console.log(err)
+                );
             },
         (anyValue)=>console.log(anyValue))
     },
