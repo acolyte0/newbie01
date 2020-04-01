@@ -1,11 +1,11 @@
-function f1(v, s, f) {
+const f1 = (v) => new Promise((resolve, reject)=> {
     if(v) {
         v += '- function 1 -';
-        s(v);
+        resolve(v);
     } else {
-        f('value of f1 invalid');
+        reject('value of f1 invalid');
     }
-}
+})
 
 function f2(v, s, f) {
     if(v) {
@@ -24,7 +24,7 @@ function f3(v, s, f) {
         f('value of v3 invalid');
     }
 }
-
+/*
 f1(
     'string',
     (whatever)=>{
@@ -42,3 +42,5 @@ f1(
     },
     (anything)=>console.log(anything)
 );
+*/
+f1('str').then((whatever)=>console.log(whatever)).catch(err=>console.log(err));
