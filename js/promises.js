@@ -18,14 +18,16 @@ const f2 = (v) => new Promise(
     }
 );
 
-function f3(v, s, f) {
-    if(v) {
-        v += '- function 3 -';
-        s(v);
-    } else {
-        f('value of v3 invalid');
+const f3 = (v) => new Promise(
+    (resolve, reject) => {
+        if(v) {
+            v += '- function 3 -';
+            resolve(v);
+        } else {
+            reject('value of v3 invalid');
+        }
     }
-}
+);
 /*
 f1(
     'string',
@@ -48,5 +50,7 @@ f1(
 f1('str').then(
     (whatever)=>{return f2(whatever)}
 ).then(
-    whatever1=>console.log(whatever1)
+    whatever1=>{return f3(whatever1)}
+).then(
+    whatever2=>console.log(whatever2)
 ).catch(err=>console.log(err));
