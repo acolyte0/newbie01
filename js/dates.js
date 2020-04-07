@@ -12,7 +12,7 @@
 // console.log(today2);
 // console.log(today2.getUTCDate());
 function getNumberOfDaysOfMonth(today) {
-    today.setDate(1);
+    today.setDate(1); // there's no 0 value on date
     today.setHours(0);
     today.setMinutes(0);
     today.setSeconds(0);
