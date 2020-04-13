@@ -29,5 +29,9 @@ function getNumberOfDaysOfMonth(today) {
     console.log((nV1 - tV1) / 86400000);
 }
 
-let t1 = new Date();
-getNumberOfDaysOfMonth(t1);
+let t1 = Date.now();
+console.log('value of Date.now(): ' + t1);
+let t2 = new Date(t1);
+getNumberOfDaysOfMonth(t2);
+
+// https://www.w3schools.com/js/js_date_methods.asp
