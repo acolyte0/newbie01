@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "word": "abdicate",
+        "type": "verb",
+        "meaning": "(of a monarch) renounce one's throne; fail to fulfill or undertake (a responsibility or duty)."
+    },
+    {
+        "id": 2,
+        "word": "abhor",
+        "type": "verb",
+        "meaning": "regard with disgust and hatred."
+    },
+    {
+        "id": 3,
+        "word": "abjection",
+        "type": "noun",
+        "meaning": "a low or downcast state : degradation."
+    },
+    {
+        "id": 4,
+        "word": "abjure",
+        "type": "verb",
+        "meaning": "To recant solemnly; renounce or repudiate."
+    },
+    {
+        "id": 5,
+        "word": "abolish",
+        "type": "verb",
+        "meaning": "to destroy, get rid of or to stop something. to do away with completely; put an end to; esp., to make (a law, etc.) null and void"
+    },
+    {
+        "id": 6,
+        "word": "abominate",
+        "type": "verb",
+        "meaning": "detest; loathe"
+    },
+    {
+        "id": 7,
+        "word": "abridge",
+        "type": "verb",
+        "meaning": "shorten (a piece of writing) without losing the sense."
+    },
+    {
+        "id": 8,
+        "word": "abscond",
+        "type": "verb",
+        "meaning": "to escape into hiding; to leave quickly and hide to avoid punishment."
+    },
+    {
+        "id": 9,
+        "word": "absolve",
+        "type": "verb",
+        "meaning": "set or declare (someone) free from blame, guilt, or responsibility."
+    },
+    {
+        "id": 10,
+        "word": "abstruse",
+        "type": "adjective",
+        "meaning": "Difficult to understand; recondite"
+    },
+    {
+        "id": 11,
+        "word": "absurd",
+        "type": "adjective",
+        "meaning": "so clearly untrue or unreasonable as to be laughable or ridiculous"
+    },
+    {
+        "id": 12,
+        "word": "abysmal",
+        "type": "adjective",
+        "meaning": "extremely bad or unfathomably appalling"
+    }
+]
