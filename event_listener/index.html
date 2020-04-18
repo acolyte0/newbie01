@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event listeners</title>
+</head>
+<body>
+    <script>
+        function putP() {
+            let paragraph1 = document.createElement('p');
+            paragraph1.appendChild(document.createTextNode('the string.'));
+            document.body.appendChild(paragraph1);
+        }
+
+        function showThis() {
+            console.log(this);
+        }
+
+        function changeStyle() {
+            Object.assign(
+                this.style,
+                {
+                    backgroundColor: '#006666',
+                    color: '#ff9900',
+                    fontFamily: 'verdana',
+                    fontSize: '1.5rem',
+                    padding: '8px',
+                    border: 'none',
+                    borderRadius: '4px'
+                }
+            );
+        }
+        Object.assign(document.body.style, {
+            backgroundColor: '#663300',
+            color: '#00cc44'
+        });
+        let btn1 = document.createElement('button');
+        btn1.appendChild(document.createTextNode('load element'));
+        btn1.id = 'id001';
+        btn1.addEventListener('click', changeStyle);
+        document.body.appendChild(btn1);
+        let v1 = 15;
+        let v1hex = v1.toString(16);
+        console.log(v1hex);
+        console.log(parseInt(v1hex, 16));
+    </script>
+</body>
+</html>
