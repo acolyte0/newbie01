@@ -13,15 +13,25 @@ let result = str3.match(/[a-z]/i);
 
 let str4 = `The "quick" brown Fox jumps over the lazy dog.`;
 let result1 = str4.match(/[A-Z][a-z]*/g);
-console.log(result1);
+// console.log(result1);
 let result2 = str4.replace(/"/g, `'`);
-console.log(result2);
+// console.log(result2);
 let str5 = `Iraq is iraq`;
 let str6 = `The quick brown fox jumps over the lazy dog.`;
+
+
+/*
+
 console.log(str5.match(/[a-z]*q[^u]/g)); // ^u any character that is not 'u'
 console.log(str5.match(/[A-Z][a-z]*q[^u]/g)); // ^u any character that is not 'u'
 console.log(str5.match(/[a-z]*q/gi)); // ends with q. case insensitive
 console.log(str5.match(/[a-z]*q/g)); // ends with q.
 console.log(str4.match(/[a-z]*[^" ]/gi));
-console.log(str4.match(/[a-z]*(i|o)[a-z]*/));
-console.log('last', str6.match(/quick (?:brown )?([a-zA-Z]+)/));
+*/
+// console.log(str4.match(/[a-z]*(i|o)[a-z]*/));
+// console.log('last', str6.match(/quick (?:brown )?([a-zA-Z]+)/));
+
+let filterString01 = `The "quick" 'brown' fox jumps over the lazy dog.`
+let result3 = filterString01.replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+
+console.log(result3);
