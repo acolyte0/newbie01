@@ -45,12 +45,25 @@ pBody.appendChild(bTitleH1);
 
 let ul01 = Array(4).fill(null);
 let ul = document.createElement('ul');
+ul.className = 'ulStyle';
 for (let  i = 0; i < ul01.length;i++) {
     ul01[i] = document.createElement('li');
-    ul01[i].appendChild(document.createTextNode('List string ' + i));
+    let span1 = document.createElement('span');
+    span1.className = 'listGap';
+    let span2 = document.createElement('span');
+    span2.className = 'listGap';
+    span1.appendChild(document.createTextNode(i+1 + '.'));
+    let p1 = document.createElement('p');
+    let p2 = document.createElement('p');
+    p1.appendChild(span1);
+    p1.appendChild(document.createTextNode('List string ' + i));
+    p2.appendChild(span2);
+    p2.appendChild(document.createTextNode('2nd string'));
+
+    ul01[i].appendChild(p1);
+    ul01[i].appendChild(p2);
+    ul01[i].className = 'liStyle';
     ul.appendChild(ul01[i]);
 }
-Object.assign(ul.style, {
-    listStyle: 'none'
-});
+
 pBody.appendChild(ul);
