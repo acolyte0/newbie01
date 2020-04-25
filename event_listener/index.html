@@ -7,10 +7,11 @@
 </head>
 <body>
     <script>
+        let body = document.body;
         function putP() {
             let paragraph1 = document.createElement('p');
             paragraph1.appendChild(document.createTextNode('the string.'));
-            document.body.appendChild(paragraph1);
+            body.appendChild(paragraph1);
         }
 
         function showThis() {
@@ -38,8 +39,9 @@
         let btn1 = document.createElement('button');
         btn1.appendChild(document.createTextNode('load element'));
         btn1.id = 'id001';
-        btn1.addEventListener('click', changeStyle);
-        document.body.appendChild(btn1);
+        // btn1.addEventListener('click', changeStyle);
+        btn1.addEventListener('click', putP);
+        body.appendChild(btn1);
     </script>
 </body>
 </html>
