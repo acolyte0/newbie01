@@ -7,5 +7,5 @@ function list1 () {
 }
 
 
-let list1b = list1.bind(0, 37);
+let list1b = list1.bind(null, 37);
 console.log(list1b(3,6,8));
