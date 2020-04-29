@@ -36,6 +36,7 @@ getNumberOfDaysOfMonth(t2);
 
 // https://www.w3schools.com/js/js_date_methods.asp
 
-let t3 = new Date();
+let t3 = new Date(1588036194273);
+console.log(t3);
 let t4 = t3.toLocaleTimeString();// convert to local time zone.
 console.log(t4);

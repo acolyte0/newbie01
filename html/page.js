@@ -67,3 +67,8 @@ for (let  i = 0; i < ul01.length;i++) {
 }
 
 pBody.appendChild(ul);
+
+let tDate = Date.now();
+let paraTag1 = document.createElement('p');
+paraTag1.appendChild(document.createTextNode(tDate));
+document.body.appendChild(paraTag1);
