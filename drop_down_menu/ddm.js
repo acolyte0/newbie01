@@ -47,14 +47,38 @@ let ul01 = cE(
 let li01 = cE(
     'li',
     {
-        display: 'block',
-        padding: '8px',
-        backgroundColor: '#997300',
-        color: 'white'
+        display: 'block'
     }
 )
 
-li01.appendChild(cTN('list 01'));
+let aLink01 = cE(
+    'a',
+    {
+        display: 'block',
+        padding: '8px',
+        backgroundColor: '#997300',
+        color: 'white',
+        cursor: 'pointer',
+        textDecoration: 'none'
+    }
+);
+aLink01.appendChild(cTN('list 01'));
+
+aLink01.addEventListener(
+    'mouseover',
+    (e)=>{
+        e.target.style.backgroundColor = 'black';
+    }
+);
+aLink01.addEventListener(
+    'mouseout',
+    (e)=>{
+        e.target.style.backgroundColor = '#997300';
+    }
+);
+
+aLink01.setAttribute('href', 'https://www.naver.com')
+li01.appendChild(aLink01);
 ul01.appendChild(li01);
 menuBlock01.appendChild(ul01);
 
