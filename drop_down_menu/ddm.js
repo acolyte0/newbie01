@@ -77,7 +77,7 @@ aLink01.addEventListener(
     }
 );
 
-aLink01.setAttribute('href', 'https://www.naver.com')
+aLink01.setAttribute('href', '#')
 li01.appendChild(aLink01);
 ul01.appendChild(li01);
 menuBlock01.appendChild(ul01);
