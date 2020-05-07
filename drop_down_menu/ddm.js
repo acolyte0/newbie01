@@ -77,8 +77,53 @@ aLink01.addEventListener(
     }
 );
 
+let subUl1 = cE(
+    'ul',
+    {
+        display: 'block',
+        listStyle: 'none'
+    }
+);
+
+let subLi1 = cE(
+    'li',
+    {
+        display: 'block'
+    }
+)
+
+let subLink01 = cE(
+    'a',
+    {
+        display: 'block',
+        padding: '8px',
+        backgroundColor: '#997300',
+        color: 'white',
+        cursor: 'pointer',
+        textDecoration: 'none'
+    }
+);
+subLink01.appendChild(cTN('sub list 01'));
+
+subLink01.addEventListener(
+    'mouseover',
+    (e)=>{
+        e.target.style.backgroundColor = 'black';
+    }
+);
+subLink01.addEventListener(
+    'mouseout',
+    (e)=>{
+        e.target.style.backgroundColor = '#997300';
+    }
+);
+
+subLi1.appendChild(subLink01);
+subUl1.appendChild(subLi1);
+
 aLink01.setAttribute('href', '#')
 li01.appendChild(aLink01);
+li01.appendChild(subUl1);
 ul01.appendChild(li01);
 menuBlock01.appendChild(ul01);
 
