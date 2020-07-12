@@ -85,41 +85,47 @@ let subUl1 = cE(
     }
 );
 
-let subLi1 = cE(
-    'li',
-    {
-        display: 'block'
-    }
-)
+let numberOfSubLists = 5;
+for(i = 0; i < numberOfSubLists; i++) {
+    let subLi1 = cE(
+        'li',
+        {
+            display: 'block'
+        }
+    )
+    
+    let subLink01 = cE(
+        'a',
+        {
+            display: 'block',
+            padding: '8px',
+            backgroundColor: '#997300',
+            color: 'white',
+            cursor: 'pointer',
+            textDecoration: 'none'
+        }
+    );
+    subLink01.appendChild(cTN('sub list 0' + i));
+    
+    subLink01.addEventListener(
+        'mouseover',
+        (e)=>{
+            e.target.style.backgroundColor = 'black';
+        }
+    );
+    subLink01.addEventListener(
+        'mouseout',
+        (e)=>{
+            e.target.style.backgroundColor = '#997300';
+        }
+    );
+    
+    subLi1.appendChild(subLink01);
+    subUl1.appendChild(subLi1);
 
-let subLink01 = cE(
-    'a',
-    {
-        display: 'block',
-        padding: '8px',
-        backgroundColor: '#997300',
-        color: 'white',
-        cursor: 'pointer',
-        textDecoration: 'none'
-    }
-);
-subLink01.appendChild(cTN('sub list 01'));
+}
 
-subLink01.addEventListener(
-    'mouseover',
-    (e)=>{
-        e.target.style.backgroundColor = 'black';
-    }
-);
-subLink01.addEventListener(
-    'mouseout',
-    (e)=>{
-        e.target.style.backgroundColor = '#997300';
-    }
-);
 
-subLi1.appendChild(subLink01);
-subUl1.appendChild(subLi1);
 
 aLink01.setAttribute('href', '#')
 li01.appendChild(aLink01);
