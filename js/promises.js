@@ -1,3 +1,4 @@
+/*
 const f1 = (v) => new Promise((resolve, reject)=> {
     if(v) {
         v += '- function 1 -';
@@ -6,7 +7,22 @@ const f1 = (v) => new Promise((resolve, reject)=> {
         reject('value of f1 invalid');
     }
 })
+*/
 
+function f1(v) {
+    return new Promise(
+        (resolve, reject) => {
+            if(v) {
+                v += '- function 1 -';
+                resolve(v);
+            } else {
+                reject('value of f1 invalid');
+            }
+        }
+    )
+}
+
+/*
 const f2 = (v) => new Promise(
     (resolve, reject) => {
         if(v) {
@@ -17,7 +33,22 @@ const f2 = (v) => new Promise(
         }
     }
 );
+*/
 
+function f2(v) {
+    return new Promise(
+        (resolve, reject) => {
+            if(v) {
+                v += '- function 2 -';
+                resolve(v);
+            } else {
+                reject('value of f2 invalid');
+            }
+        }
+    );
+}
+
+/*
 const f3 = (v) => new Promise(
     (resolve, reject) => {
         if(v) {
@@ -28,6 +59,21 @@ const f3 = (v) => new Promise(
         }
     }
 );
+*/
+
+function f3(v) {
+    return new Promise(
+        (resolve, reject) => {
+            if(v) {
+                v += '- function 3 -';
+                resolve(v);
+            } else {
+                reject('value of f3 invalid');
+            }
+        }
+    );
+}
+
 /*
 f1(
     'string',
