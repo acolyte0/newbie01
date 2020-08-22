@@ -71,4 +71,39 @@ pBody.appendChild(ul);
 let tDate = Date.now();
 let paraTag1 = document.createElement('p');
 paraTag1.appendChild(document.createTextNode(tDate));
+
+let hasInput001 = document.createElement('div');
+Object.assign(
+    hasInput001.style,
+    {
+        border: '1px solid gray',
+        padding: '16px'
+    }
+)
+let input001 = document.createElement('input');
+input001.id = 'input001'
+let hitIt = document.createElement('button');
+let txtBttn = document.createTextNode('click this');
+hitIt.appendChild(txtBttn);
+hitIt.addEventListener(
+    'click',
+    (e) => {
+        let value = document.querySelector('#input001').value;
+        let output = document.querySelector('#showOutput');
+
+        let value1 = value.replace(/[`']/g, '&apos;').replace('\"', '&quot;').replace('=', '&equals;').replace(':', '&colon;');
+        console.log(value1);
+        output.innerHTML = value1;
+    }
+);
+let output001 = document.createElement('p');
+output001.id = 'showOutput';
+
+hasInput001.appendChild(input001);
+hasInput001.appendChild(hitIt);
+hasInput001.appendChild(output001);
+
+
+
 document.body.appendChild(paraTag1);
+document.body.appendChild(hasInput001);
