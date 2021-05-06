@@ -85,17 +85,7 @@ input001.id = 'input001'
 let hitIt = document.createElement('button');
 let txtBttn = document.createTextNode('click this');
 hitIt.appendChild(txtBttn);
-hitIt.addEventListener(
-    'click',
-    (e) => {
-        let value = document.querySelector('#input001').value;
-        let output = document.querySelector('#showOutput');
 
-        let value1 = value.replace(/[`']/g, '&apos;').replace('\"', '&quot;').replace('=', '&equals;').replace(':', '&colon;');
-        console.log(value1);
-        output.innerHTML = value1;
-    }
-);
 let output001 = document.createElement('p');
 output001.id = 'showOutput';
 
@@ -107,3 +97,30 @@ hasInput001.appendChild(output001);
 
 document.body.appendChild(paraTag1);
 document.body.appendChild(hasInput001);
+
+hitIt.addEventListener(
+    'click',
+    (e) => {
+        let value = document.querySelector('#input001').value;
+
+        let value1 = value.replace(/[`']/g, '&apos;').replace('\"', '&quot;').replace('=', '&equals;').replace(':', '&colon;');
+        console.log(value1);
+        document.querySelector('#showOutput').innerHTML = value1 + 'valid';
+    }
+);
+
+let block001 = document.createElement('div');
+Object.assign(
+    block001.style,
+    {
+        backgroundColor: 'gray',
+        width: '64px',
+        height: '64px',
+        border: '2px solid pink',
+        padding: '8px'
+    }
+);
+let txtInsideBox = document.createTextNode('t1');
+block001.appendChild(txtInsideBox);
+
+document.body.appendChild(block001);

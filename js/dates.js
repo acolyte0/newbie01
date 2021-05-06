@@ -19,7 +19,7 @@ function getNumberOfDaysOfMonth(today) {
     today.setMilliseconds(0);
     console.log('line 20: ' + today);
     console.log('month of today: ' + today.getMonth());
-    let tV1 = today.getTime();
+    let tV1 = today.getTime(); // Get the time (milliseconds since January 1, 1970)
     console.log('get time of the month: ' + tV1);
     let nextMonth = new Date(tV1); // must create another object
     nextMonth.setMonth(today.getMonth() + 1);
