@@ -1,7 +1,7 @@
 let noValue;
-// noValue == null ? console.log(noValue.toString()) : console.log('something');
+// noValue == null ? console.log(typeof noValue) : console.log('something');
 function f1(target) {
-    target != null ? target.toString() : 'it is null'
+    target != null ? typeof target : 'it is null'
 }
 
 console.log(f1());
